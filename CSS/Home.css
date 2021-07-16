@@ -328,6 +328,8 @@ html, body{
             right: 0em;
             z-index: 2;
             overflow: hidden;
+            transition: all 0.5s ease-in-out;
+
         }
 
         .statement .cornor-decor::after{
@@ -342,13 +344,19 @@ html, body{
             transform: rotate(45deg);
         }
 
+        .expand{
+            width: 100em !important;
+            height: 100em !important;
+
+        }
+
         .statement i {
             color: white;
             font-size: 2em;
             position: absolute;
             bottom: 0.2em;
             right: 0.2em;
-            z-index: 3;
+            z-index: 5;
             cursor: pointer;
         }
 
@@ -358,7 +366,37 @@ html, body{
             font-weight: bold;
             font-size: 2.5em;
             font-style: italic;
+            z-index: 1;
+        }
+
+        .statement .description{
+            position: absolute;
+            width: 100%;
+            height: 100%;
             z-index: 4;
+            padding: 0.5em;
+            opacity: 0;
+            transition: none;
+        }
+
+        .show-description{
+            opacity: 1 !important;
+            transition: opacity 0.5s ease-in-out 0.5s !important;
+        }
+
+
+        .description p{
+            color: white;
+            font-size: 1em;
+            padding: 0.1em 0.5em;
+        }
+
+        
+        .description .smaller-title{
+            text-transform: capitalize;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-bottom: 3px solid white;
         }
 
 @media only screen and (max-width: 850px) and (orientation: landscape){
@@ -436,6 +474,15 @@ html, body{
 
     .mission-statement{
         width: 70%;
+    }
+
+    .description{
+        padding: 0.1em 1.5em !important;
+    }
+
+
+    .description p{
+        font-size: 1.3em;
     }
 }
 
@@ -611,13 +658,25 @@ html, body{
         font-size: 3em;
     }
 
-    .statement p{
+    .statement > p{
         font-size: 3em;
     }
 
     .statement .cornor-decor{
         height: 10em;
         width: 10em;
+    }
+
+    .description{
+        padding: 0.1em 0.5em !important;
+    }
+
+    .description .smaller-title{
+        font-size: 2em;
+    }
+
+    .description p{
+        font-size: 1.2em;
     }
 }
 
@@ -626,5 +685,14 @@ html, body{
    .mission-statement-container{
        width: 80%;
    }
+
+
+    .description .smaller-title{
+        font-size: 2.5em;
+    }
+
+    .description p{
+        font-size: 1.4em;
+    }
 
 }

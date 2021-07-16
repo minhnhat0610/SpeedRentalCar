@@ -92,4 +92,14 @@ $(document).ready(function(){
             }
         }
     })
+
+
+
+    //Click plus icon to expand mission statement
+    $('.statement i').on('click',function(e){
+        $(e.currentTarget).siblings('div.cornor-decor').toggleClass('expand');
+        $(e.currentTarget).toggleClass('fa-minus');
+        $(e.currentTarget).toggleClass('fa-plus');
+        $(e.currentTarget).siblings('div.description').toggleClass('show-description');
+    })
 })
