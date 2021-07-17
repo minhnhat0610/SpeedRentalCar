@@ -102,4 +102,6 @@ $(document).ready(function(){
         $(e.currentTarget).toggleClass('fa-plus');
         $(e.currentTarget).siblings('div.description').toggleClass('show-description');
     })
+
+    
 })
