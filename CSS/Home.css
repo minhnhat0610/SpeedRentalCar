@@ -29,6 +29,7 @@ html, body{
     overflow-x: hidden;
 }
 
+
 /* Navigation */
 .nav-container{
     width: 100%;
@@ -509,6 +510,8 @@ body .title{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .customer-feedback-container > div{
@@ -602,6 +605,37 @@ body .title{
                width: 100%;
                object-fit: cover;
             }
+
+
+/* page footer */
+
+.page-footer{
+    height: fit-content;
+    width: 100%;
+    background-color: #828282;
+    display: flex;
+    align-items: center;
+}
+
+.page-footer img{
+    height: 4em;
+    width: auto;
+}
+
+.page-footer button{
+    margin-left: auto;
+    margin-right: 5%;
+    padding: 1em;
+    border-radius: 50%;
+    border: none;
+    background-color: #003f88;
+    color: white;
+    cursor: pointer;
+}
+
+.page-footer button i{
+    font-size: 1.5em;
+}
 
 
 @media only screen and (max-width: 850px) and (orientation: landscape){
@@ -973,6 +1007,79 @@ body .title{
 
     .service-detail{
         font-size: 1.2em;
+    }
+
+    .customer-feedback-container{
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        height: 70vh;
+        width: 70%;
+        margin-top: 10%;
+    }
+
+    .customer-feedback-container > div{
+        width: 50%;
+        height: 100%;
+    }
+
+    .company-gratitude-container{
+        align-self: auto;
+        position: relative;
+        border: none;
+    }
+
+    .gratitude{
+        padding: 1em 3em;
+        border-left: none;
+        border-right: none;
+
+        width: 100%;
+    }
+
+    .gratitude::after{
+        content: "";
+        position: absolute;
+        width: 1000%;
+        height: 0%;
+        border-bottom: 3px solid #ffd500;
+        bottom: 5%;
+        left: 0%;
+    }
+
+    .gratitude::after{
+        content: "";
+        position: absolute;
+        width: 1000%;
+        height: 0%;
+        border-bottom: 3px solid #ffd500;
+        bottom: 5%;
+        left: 0%;
+    }
+
+    .gratitude::before{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 150%;
+        border-left: 3px solid #ffd500;
+        top: 0;
+        right: 0%;
+    }
+
+    .gratitude-detail{
+        font-size: 1.3em;
+    }
+
+    .photos-inner-container{
+        transform: translateY(3em) translateX(3em);
+    }
+
+    .feedback-photos-container{
+        height: 95% !important;
+    }
+
+    .page-footer{
+       display: none;
     }
 
 }
