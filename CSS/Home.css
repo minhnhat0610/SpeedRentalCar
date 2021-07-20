@@ -27,6 +27,11 @@ html, body{
     position: relative;
     font-family: "Open-Sans";
     overflow-x: hidden;
+
+}
+
+body{
+    overflow-y: hidden;
 }
 
 
@@ -777,6 +782,11 @@ body .title{
 
 @media only screen 
    and (min-width : 1200px) {
+
+    body{
+        padding-bottom: 15em;
+
+    }
    .mobile-menu-icon{
        display: none !important;
    }

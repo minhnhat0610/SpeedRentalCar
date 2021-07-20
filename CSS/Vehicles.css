@@ -1,0 +1,68 @@
+body{
+    border: 1px solid red
+}
+/* Vehicles navigation mobile */
+.vehicles-nav-mobile{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+    /* Nav Icon */
+    .nav-icon-container{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-icon{
+        height: 100%;
+        padding: 0px 0.5em;
+    }
+
+
+    .nav-icon-container span{
+        width: 3px;
+        height: 70%;
+        background-color: #ffd500;
+        margin-left: 2%;
+        margin-right: 2%;
+        transform: rotate(20deg);
+    }
+
+    /* Vehicles Links */
+    .vehicles-links-container{
+        height: 70%;
+        width: 100%;
+        display: flex;
+    }
+
+
+    .vehicles-tab{
+        min-width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        overflow-y: scroll;
+    }
+
+    .vehicles-tab img{
+        height: 80%;
+        width: auto;
+        margin-right: 5%;
+    }
+
+    .hide-tab{
+        display: none;
+    }
+
+/* Selected vehicle */
+.selected-vehicle-display{
+    height: 70vh;
+    width: 100%;
+    border: 1px solid green;
+
+}

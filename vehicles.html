@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/Navigation.css" rel="stylesheet"/>
+    <link href="CSS/Vehicles.css" rel="stylesheet"/>
+    <title>All Vehicles</title>
+</head>
+<body>
+    <div class="nav-container">
+        <img class="company-logo" src="Photos/Logo/Logo.png"/>
+        <div class="mobile-menu-icon">
+            <span class="first regular"></span>
+            <span class="regular"></span>
+            <span class="regular"></span>
+        </div>
+        <div class="laptop-nav">
+            <nav>
+                <ul>
+                    <li><a href="" class="active-page">Home</a></li>
+                    <span></span>
+                    <li><a href="">All Vehicles</a></li>
+                    <span></span>
+                    <li><a href="">Book Us</a></li>
+                    <span></span>
+                    <li><a href="">Manage Reservation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="mobile-nav hide-menu">
+        <nav>
+            <ul>
+                <li class="roll-up"><a href="" class="active-page">Home</a></li>
+                <span></span>
+                <li class="roll-up"><a href="">All Vehicles</a></li>
+                <span></span>
+                <li class="roll-up"><a href="">Book Us</a></li>
+                <span></span>
+                <li class="roll-up"><a href="">Manage Reservation</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="vehicles-nav-mobile">
+        <div class="nav-icon-container">
+            <img id="sport-icon" class="nav-icon" src="Photos/car-icons/sport-car-selected.png" alt="sport-car"/>
+            <span></span>
+            <img id="sedan-icon" class="nav-icon" src="Photos/car-icons/sedan.png" alt="sedan"/>
+            <span></span>
+            <img id="suv-icon" class="nav-icon" src="Photos/car-icons/suv.png" alt="suv"/>
+        </div>
+        <div class="vehicles-links-container">
+            <div id="sport-cars-tab" class="vehicles-tab">
+                <img src="Photos/Sport/mustang.png">
+                <img src="Photos/Sport/Mer-sport.png">
+                
+            </div>
+            <div id="sedan-tab" class="vehicles-tab hide-tab">
+                <img src="Photos/Sedan/Hyu-white.png">
+                <img src="Photos/Sedan/ford.png">
+                
+            </div>
+            <div id="suv-tab" class="vehicles-tab hide-tab">
+                <img src="Photos/SUV/hyu-suv.png">
+                <img src="Photos/SUV/Mer-suv.png">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="selected-vehicle-display">
+
+    </div>
+    
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/e23e09cf11.js" crossorigin="anonymous"></script>
+<script src="JS/navigation.js"></script>
+<script src="JS/Vehicles.js"></script>
+</body>
+</html>

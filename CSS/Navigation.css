@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'Anton';
+    src: url(../Fonts/Anton-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    src: url(../Fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    src: url(../Fonts/OpenSans-Bold.ttf);
+    font-weight: bold;
+}
+
+*{
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    width: 100vw;
+    height: auto;
+    position: relative;
+    font-family: "Open-Sans";
+    overflow-x: hidden;
+}
+
+
+
+
+/* Navigation */
+.nav-container{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    box-shadow:
+  0 0.6px 2px rgba(0, 0, 0, 0.007),
+  0 1.3px 4.5px rgba(0, 0, 0, 0.01),
+  0 2.3px 7.9px rgba(0, 0, 0, 0.013),
+  0 3.6px 12.5px rgba(0, 0, 0, 0.015),
+  0 5.6px 19.3px rgba(0, 0, 0, 0.017),
+  0 8.7px 30.1px rgba(0, 0, 0, 0.02),
+  0 14.5px 50px rgba(0, 0, 0, 0.023),
+  0 29px 100px rgba(0, 0, 0, 0.03)
+;
+}
+
+        .nav-container .company-logo{
+            height: 100%;
+        }
+
+        .nav-container .mobile-menu-icon{
+            position: absolute;
+            right: 0.5em;
+            width: fit-content;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-end;
+        }
+
+        .mobile-menu-icon span{
+            height: 0.2em;
+            background-color: #003f88;
+            transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .regular{
+            width: 2.5em;
+        }
+        
+        .first{
+            width: 1.5em;
+        }
+
+        .laptop-nav{
+            display: none;
+        }
+
+        /* Mobile navigation */
+        .mobile-nav{
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 90vh;
+            transition: transform 500ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+            background-color: white;
+        }
+
+        .hide-menu{
+            transform: translateX(100%);
+        }
+
+        .mobile-nav nav{
+            height: 100%;
+            width: 100%;
+        }
+
+        .mobile-nav ul{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-right: 1em;
+            padding-left: 1em;;
+        }
+
+        .mobile-nav ul li{
+            list-style-type: none;
+            width: 100%;
+            padding: 1em;
+            text-align: center;
+            font-family: 'Anton';
+            font-style: italic;
+            transition: 500ms ease-in-out 500ms;
+        }
+
+        .roll-up{
+            transform: translateY(-20%);
+            opacity: 0;
+        }
+
+        .mobile-nav li a{
+            text-decoration: none;
+            font-size: 1.8em;
+            color: #003f88;
+        }
+
+        .mobile-nav li a.active-page{
+            color: #fdc500;
+        }
+
+   
+
+        .mobile-nav ul span{
+            width: 100%;
+            height: 2px;
+            background-color: #fdc500;
+        }
+
+
+@media only screen and (max-width: 850px) and (orientation: landscape){
+    .nav-container{
+        height: 20vh;
+    }
+
+    .mobile-nav{
+        height: auto;
+    }
+}
+
+
+@media only screen 
+   and (min-width : 768px) {
+
+   }
+
+
+   @media only screen 
+   and (min-width : 1200px) {
+    body{
+        padding-bottom: 15em;
+
+    }
+
+   .mobile-menu-icon{
+       display: none !important;
+   }
+
+   .nav-container .company-logo{
+       margin-right: auto;
+       margin-left: 2em;
+   }
+
+   .laptop-nav{
+       margin-left: auto;
+       display: block;
+   }
+
+   .laptop-nav ul{
+       width: 100%;
+       height: 100%;
+       display: flex;
+   }
+
+   .laptop-nav li{
+        list-style-type: none;
+        width: max-content;
+        padding: 1em 2.5em;
+        text-align: center;
+        font-family: 'Anton';
+        font-style: italic;
+        overflow: hidden;
+        cursor: pointer;
+
+   }
+
+   
+   .laptop-nav li a{
+    text-decoration: none;
+    font-size: 2em;
+    color: #003f88;
+    display: block;
+}
+
+    .laptop-nav li a.active-page{
+        color: #fdc500;
+    }
+
+    .hoverLinks{
+        animation: hoverEffect 0.2s linear 1 normal,
+                hoverEffect2 0.2s linear 0.2s 1 normal;
+    }
+
+
+    @keyframes hoverEffect{
+        0%{
+            transform: translateY(0%);
+        }
+
+        100%{
+            transform: translateY(-200%);
+        }
+    }
+
+    @keyframes hoverEffect2{
+        0%{
+            transform: translateY(200%);
+        }
+
+        100%{
+            transform: translateY(0%);
+        }
+    }
+
+    .laptop-nav span{
+        width: 2px;
+        background-color: #fdc500;
+        transform: rotate(45deg);
+
+
+    }
+
+
+} 
+
+@media only screen 
+   and (min-width : 1600px) {
+    
+
+   }
