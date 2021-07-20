@@ -19,9 +19,9 @@
         <div class="laptop-nav">
             <nav>
                 <ul>
-                    <li><a href="" class="active-page">Home</a></li>
+                    <li><a href="index.html" >Home</a></li>
                     <span></span>
-                    <li><a href="">All Vehicles</a></li>
+                    <li><a href="" class="active-page">All Vehicles</a></li>
                     <span></span>
                     <li><a href="">Book Us</a></li>
                     <span></span>
@@ -33,9 +33,9 @@
     <div class="mobile-nav hide-menu">
         <nav>
             <ul>
-                <li class="roll-up"><a href="" class="active-page">Home</a></li>
+                <li class="roll-up"><a href="index.html" >Home</a></li>
                 <span></span>
-                <li class="roll-up"><a href="">All Vehicles</a></li>
+                <li class="roll-up"><a href="" class="active-page">All Vehicles</a></li>
                 <span></span>
                 <li class="roll-up"><a href="">Book Us</a></li>
                 <span></span>
@@ -44,37 +44,101 @@
         </nav>
     </div>
 
-    <div class="vehicles-nav-mobile">
-        <div class="nav-icon-container">
-            <img id="sport-icon" class="nav-icon" src="Photos/car-icons/sport-car-selected.png" alt="sport-car"/>
-            <span></span>
-            <img id="sedan-icon" class="nav-icon" src="Photos/car-icons/sedan.png" alt="sedan"/>
-            <span></span>
-            <img id="suv-icon" class="nav-icon" src="Photos/car-icons/suv.png" alt="suv"/>
-        </div>
-        <div class="vehicles-links-container">
-            <div id="sport-cars-tab" class="vehicles-tab">
-                <img src="Photos/Sport/mustang.png">
-                <img src="Photos/Sport/Mer-sport.png">
-                
+    <div class="body-content">
+        <div class="vehicles-nav-mobile">
+            <div class="nav-icon-container">
+                <img id="sport-icon" class="nav-icon" src="Photos/car-icons/sport-car-selected.png" alt="sport-car"/>
+                <span></span>
+                <img id="sedan-icon" class="nav-icon" src="Photos/car-icons/sedan.png" alt="sedan"/>
+                <span></span>
+                <img id="suv-icon" class="nav-icon" src="Photos/car-icons/suv.png" alt="suv"/>
             </div>
-            <div id="sedan-tab" class="vehicles-tab hide-tab">
-                <img src="Photos/Sedan/Hyu-white.png">
-                <img src="Photos/Sedan/ford.png">
-                
-            </div>
-            <div id="suv-tab" class="vehicles-tab hide-tab">
-                <img src="Photos/SUV/hyu-suv.png">
-                <img src="Photos/SUV/Mer-suv.png">
-                
-            </div>
-        </div>
-    </div>
+            <div class="vehicles-links-container">
+                <div id="sport-cars-tab" class="vehicles-tab">
+                    <div class="vehicle">
+                        <img src="Photos/Sport/mustang.png">
+                        <svg viewbox="0 0 240 140">
+                            <defs>
+                                <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                  <stop offset="0%" style="stop-color:#00509d;stop-opacity:1" />
+                                  <stop offset="100%" style="stop-color:#fdc500;stop-opacity:1" />
+                                </linearGradient>
+                              </defs>
+                            <path d="M 250 50 C 230 70 210 0 164 29 C 120 71 110 20 72 59 C 53 89 20 80 38 111 C 66 128 100 97 102 150 L 249 150 Z" 
+                                    fill="url(#grad)"/>
+                        </svg>
+                    </div>
+                    <div class="vehicle">
+                        <img src="Photos/Sport/Mer-sport.png">
+                        <svg viewbox="0 0 240 140">
+                            <path d="M 250 50 C 230 70 210 0 164 29 C 120 71 110 20 72 59 C 53 89 20 80 38 111 C 66 128 100 97 102 150 L 249 150 Z" 
+                                    fill="url(#grad)"/>
+                        </svg>
+                    </div>
+                    
+                </div>
+                <div id="sedan-tab" class="vehicles-tab hide-tab">
+                    <div class="vehicle">
+                        <img src="Photos/Sedan/Hyu-white.png">
+                        <svg viewbox="0 0 240 140">
+                            <defs>
+                                <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                  <stop offset="0%" style="stop-color:#00509d;stop-opacity:1" />
+                                  <stop offset="100%" style="stop-color:#fdc500;stop-opacity:1" />
+                                </linearGradient>
+                              </defs>
+                            <path d="M 250 50 C 230 70 210 0 164 29 C 120 71 110 20 72 59 C 53 89 20 80 38 111 C 66 128 100 97 102 150 L 249 150 Z" 
+                                    fill="url(#grad2)"/>
+                        </svg>
+                    </div>
+                    <div class="vehicle">
+                        <img src="Photos/Sedan/ford.png">
+                        <svg viewbox="0 0 240 140">
 
-    <div class="selected-vehicle-display">
+                            <path d="M 250 50 C 230 70 210 0 164 29 C 120 71 110 20 72 59 C 53 89 20 80 38 111 C 66 128 100 97 102 150 L 249 150 Z" 
+                                    fill="url(#grad2)"/>
+                        </svg>
+                    </div>
+                    
+                </div>
+                <div id="suv-tab" class="vehicles-tab hide-tab">
+                    <div class="vehicle">
+                        <img src="Photos/SUV/hyu-suv.png">
+                        <svg viewbox="0 0 240 140">
+                            <defs>
+                                <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
+                                  <stop offset="0%" style="stop-color:#00509d;stop-opacity:1" />
+                                  <stop offset="100%" style="stop-color:#fdc500;stop-opacity:1" />
+                                </linearGradient>
+                              </defs>
+                            <path d="M 250 50 C 230 70 210 0 164 29 C 120 71 110 20 72 59 C 53 89 20 80 38 111 C 66 128 100 97 102 150 L 249 150 Z" 
+                                    fill="url(#grad3)"/>
+                        </svg>
+                    </div>
+                    <div class="vehicle">
+                        <img src="Photos/SUV/Mer-suv.png">
+                        <svg viewbox="0 0 240 150">
 
-    </div>
+                            <path d="M 250 50 C 230 70 210 0 164 29 C 120 71 110 20 72 59 C 53 89 20 80 38 111 C 66 128 100 97 102 150 L 249 150 Z" 
+                                    fill="url(#grad3)"/>
+                        </svg>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     
+        <div class="selected-vehicle-display">
+    
+        </div>
+
+        <div class="selected-vehicles-infor">
+
+        </div>
+        
+    </div>
+
+   
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>

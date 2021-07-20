@@ -1,12 +1,25 @@
 body{
     border: 1px solid red
 }
+
+.body-content{
+    width: 100%;
+    height: auto;
+    border: 1px solid purple;
+    display: flex;
+    flex-direction: column;
+}
 /* Vehicles navigation mobile */
+.vehicles-nav-laptop{
+    display: none;
+}
 .vehicles-nav-mobile{
     height: 20vh;
     width: 100%;
     display: flex;
     flex-direction: column;
+
+
 }
 
     /* Nav Icon */
@@ -16,6 +29,18 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
+        box-shadow:
+  0 0.4px 2.2px rgba(0, 0, 0, 0.014),
+  0 0.9px 5.3px rgba(0, 0, 0, 0.02),
+  0 1.8px 10px rgba(0, 0, 0, 0.025),
+  0 3.1px 17.9px rgba(0, 0, 0, 0.03),
+  0 5.8px 33.4px rgba(0, 0, 0, 0.036),
+  0 14px 80px rgba(0, 0, 0, 0.05)
+;
+
+      
+      
+      
     }
 
     .nav-icon{
@@ -38,6 +63,17 @@ body{
         height: 70%;
         width: 100%;
         display: flex;
+
+        box-shadow:
+  inset 0 -0.4px 2.2px rgba(0, 0, 0, 0.014),
+  inset 0 -0.9px 5.3px rgba(0, 0, 0, 0.02),
+  inset 0 -1.8px 10px rgba(0, 0, 0, 0.025),
+  inset 0 -3.1px 17.9px rgba(0, 0, 0, 0.03),
+  inset 0 -5.8px 33.4px rgba(0, 0, 0, 0.036),
+  inset 0 -14px 80px rgba(0, 0, 0, 0.05)
+;
+
+      
     }
 
 
@@ -46,23 +82,151 @@ body{
         height: 100%;
         display: flex;
         align-items: center;
-        overflow-y: scroll;
+        justify-content: flex-start;
+        overflow-y: auto;
+    }
+    .vehicle{
+        height: 80%;
+        display: flex;
+        margin-right: 5%;
     }
 
     .vehicles-tab img{
-        height: 80%;
         width: auto;
+        height: 100%;
         margin-right: 5%;
+    }
+
+    .vehicle svg{
+        display: none;
     }
 
     .hide-tab{
         display: none;
     }
 
-/* Selected vehicle */
+/* Selected vehicle display */
 .selected-vehicle-display{
     height: 70vh;
     width: 100%;
     border: 1px solid green;
 
 }
+
+
+/* Selected vehicles information */
+.selected-vehicles-infor{
+    height: 70vh;
+    width: 100%;
+    border: 1px solid blue;
+}
+
+
+@media only screen and (max-width: 850px) and (orientation: landscape){
+    .vehicles-nav-mobile{
+        height: 40vh;
+    }
+
+    .selected-vehicle-display{
+        height: 100vh;
+    }
+}
+
+
+@media only screen 
+   and (min-width : 768px) {
+
+   }
+
+@media only screen 
+   and (min-width : 1200px) {
+    body{
+        padding-bottom: 0em;
+        height: 100vh;
+    }
+    .body-content{
+        height: 80vh;
+        flex-direction: row;
+    }
+
+    .vehicles-nav-mobile{
+        display: flex;
+        height: 100%;
+        width: 20%;
+        border: 1px solid blue;
+        
+    }
+
+    .nav-icon-container{
+        width: 100%;
+        height: 10%;
+    }
+
+    .nav-icon-container img{
+        width: 20%;
+        height: auto;
+    }
+
+    .vehicles-links-container{
+        width: 100%;
+        height: 90%;
+    }
+
+    .vehicles-tab{
+        flex-direction: column;
+    }
+
+
+    .vehicle{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        margin-right: 0%;
+
+    }
+
+    .vehicle svg{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        z-index: 1;
+    }
+
+
+
+    .vehicle img{
+        width: 90%;
+        height: auto;
+        transform: translateX(5em);
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+
+
+
+
+    .selected-vehicle-display{
+        width: 50%;
+        height: 100%;
+    }
+
+    .selected-vehicles-infor{
+        height: 100%;
+        width: 30%;
+        border: 1px solid yellow;
+    }
+}
+
+
+
+
+
+   @media only screen 
+   and (min-width : 1600px) {
+
+   }
+   
