@@ -5,16 +5,13 @@ body{
 .body-content{
     width: 100%;
     height: auto;
-    border: 1px solid purple;
     display: flex;
     flex-direction: column;
 }
 /* Vehicles navigation mobile */
-.vehicles-nav-laptop{
-    display: none;
-}
+
 .vehicles-nav-mobile{
-    height: 20vh;
+    height: 15vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -46,6 +43,8 @@ body{
     .nav-icon{
         height: 100%;
         padding: 0px 0.5em;
+        cursor: pointer;
+
     }
 
 
@@ -91,10 +90,11 @@ body{
         margin-right: 5%;
     }
 
-    .vehicles-tab img{
+    .vehicle img{
         width: auto;
         height: 100%;
-        margin-right: 5%;
+        cursor: pointer;
+
     }
 
     .vehicle svg{
@@ -107,19 +107,137 @@ body{
 
 /* Selected vehicle display */
 .selected-vehicle-display{
-    height: 70vh;
+    height: 75vh;
     width: 100%;
-    border: 1px solid green;
-
+    display: flex;
+    overflow-x: hidden;
 }
+
+.gutter{
+    width: 10%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+}
+
+.vehicle-display{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 1em;
+}
+
+        .selected-vehicle{
+            height: 70%;
+            width: 100%;
+            background-image: url(../Photos/Feature/Feature-backgr.jpg);
+            background-position: center center;
+            background-size: cover;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+        }
+
+        .selected-vehicle img{
+            display: block;
+            width: auto;
+            height: 50%;
+            transform: translate(20%, 20%);
+            opacity: 0;
+            position: relative;
+            z-index: 1;
+            transition: 500ms ease-in-out;
+        }
+
+        .show-selected-vehicle{
+            animation: show-vehicle 500ms ease-in-out 1 forwards;
+        }
+
+        @keyframes show-vehicle {
+            0%{
+                transform: translate(100%, 20%);
+                opacity: 0;
+            }
+
+            100%{
+                transform: translate(20%, 20%);
+                opacity: 1;
+            }
+        }
+
+        .rate{
+            height: 20%;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .rate p{
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #00296b;
+        }
+
+        .rate button{
+            font-size: 1.5em;
+            padding: 0.5em 1em;
+            border: none;
+            background-color: #fdc500;
+            border-radius: 5px;
+            color: white;
+            text-transform: capitalize;
+            cursor: pointer;
+
+        }
+
 
 
 /* Selected vehicles information */
 .selected-vehicles-infor{
-    height: 70vh;
+    height: 100vh;
     width: 100%;
-    border: 1px solid blue;
+    padding: 4em 2em;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
+
+    .infor-inner-container{
+        width: 100%;
+        height: 100%;
+        border: 3px solid #fdc500;
+        border-left: none;
+        border-bottom: none;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .infor-inner-container::before{
+        content: "";
+        width: 0px;
+        height: 1000%;
+        border-left: 3px solid #fdc500;
+        position: absolute;
+        left: -2px;
+        top: -3px;
+    }
+
+    .infor-inner-container::after{
+        content: "";
+        width: 1000%;
+        height: 0%;
+        border-bottom: 3px solid #fdc500;
+        position: absolute;
+        right: -3px;
+        bottom: -3px;
+    }
 
 
 @media only screen and (max-width: 850px) and (orientation: landscape){
@@ -128,14 +246,44 @@ body{
     }
 
     .selected-vehicle-display{
-        height: 100vh;
+        height: 200vh;
     }
 }
 
 
 @media only screen 
    and (min-width : 768px) {
+        .gutter{
+            width: 20%;
+        }
+        
+        .vehicle-display{
+            width: 60%;
+        }
 
+        .selected-vehicle img{
+            height: 60%;
+        }
+
+        .rate p{
+            font-size: 2.5em;
+        }
+
+        .rate button{
+            font-size: 2em;
+        }
+
+        .infor-inner-container{
+            width: 90%;
+            height: 90%;
+        }
+   }
+
+   @media only screen 
+   and (min-width : 768px) and (orientation: landscape){
+        .selected-vehicle-display{
+            height: 120vh;
+        }
    }
 
 @media only screen 
@@ -143,6 +291,8 @@ body{
     body{
         padding-bottom: 0em;
         height: 100vh;
+        max-height: 100vh;
+        overflow-y: hidden;
     }
     .body-content{
         height: 80vh;
@@ -153,8 +303,7 @@ body{
         display: flex;
         height: 100%;
         width: 20%;
-        border: 1px solid blue;
-        
+        border-right: 3px solid #fdc500;
     }
 
     .nav-icon-container{
@@ -170,6 +319,7 @@ body{
     .vehicles-links-container{
         width: 100%;
         height: 90%;
+        box-shadow: none;
     }
 
     .vehicles-tab{
@@ -183,7 +333,7 @@ body{
         overflow: hidden;
         position: relative;
         margin-right: 0%;
-
+        border-bottom: 1px solid #00296b;
     }
 
     .vehicle svg{
@@ -214,11 +364,41 @@ body{
         height: 100%;
     }
 
+    .gutter{
+        width: 25%;
+    }
+
+    .vehicle-display{
+        width: 50%;
+    }
+
+    .selected-vehicle img{
+        height: 55%;
+    }
+
+    .rate p{
+        font-size: 1.5em;
+    }
+
+    .rate button{
+        font-size: 1.5em;
+    }
+
+
+
     .selected-vehicles-infor{
         height: 100%;
         width: 30%;
-        border: 1px solid yellow;
+        align-items: flex-end;
+        padding-bottom: 0px;
+        overflow: visible;
+        padding: 0em 2em
     }
+
+    .infor-inner-container{
+        height: 94%;
+    }
+
 }
 
 
@@ -228,5 +408,24 @@ body{
    @media only screen 
    and (min-width : 1600px) {
 
+    .gutter{
+        width: 20%;
+    }
+
+    .vehicle-display{
+        width: 60%;
+    }
+
+    .selected-vehicle img{
+        height: 65%;
+    }
+
+    .rate p{
+        font-size: 2em;
+    }
+
+    .rate button{
+        font-size: 2em;
+    }
    }
    

@@ -39,4 +39,20 @@ $(document).ready(function(){
         $('#sedan-tab').addClass('hide-tab');
         $('#sport-cars-tab').addClass('hide-tab');
     })
+
+
+    //click to select vehicles
+    $('.vehicle img').on('click',function(e){
+        let source = $(e.currentTarget).attr('src');
+        $('.selected-vehicle img').attr('src',source);
+
+
+        //Restart animation
+        $('.selected-vehicle img').removeClass('show-selected-vehicle');
+
+        $('.selected-vehicle img').outerWidth();    //triger a reflow
+
+        $('.selected-vehicle img').addClass('show-selected-vehicle');
+
+    })
 })
