@@ -149,6 +149,36 @@ html, body{
             background-color: #fdc500;
         }
 
+/* page footer */
+
+.page-footer{
+    height: fit-content;
+    width: 100%;
+    background-color: #828282;
+    display: flex;
+    align-items: center;
+}
+
+.page-footer img{
+    height: 4em;
+    width: auto;
+}
+
+.page-footer button{
+    margin-left: auto;
+    margin-right: 5%;
+    padding: 1em;
+    border-radius: 50%;
+    border: none;
+    background-color: #003f88;
+    color: white;
+    cursor: pointer;
+}
+
+.page-footer button i{
+    font-size: 1.5em;
+}
+
 
 @media only screen and (max-width: 850px) and (orientation: landscape){
     .nav-container{
@@ -251,6 +281,10 @@ html, body{
 
 
     }
+
+    .page-footer{
+        display: none;
+     }
 
 
 } 

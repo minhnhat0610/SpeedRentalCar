@@ -55,4 +55,12 @@ $(document).ready(function(){
         $('.selected-vehicle img').addClass('show-selected-vehicle');
 
     })
+
+
+    //Click button on footer to scroll top of the page
+    $('.page-footer button').on('click',function(){
+        $('html, body').animate({
+            scrollTop: 0
+        },1000)
+    })
 })
