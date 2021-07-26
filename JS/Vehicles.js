@@ -52,7 +52,7 @@ $(document).ready(function(){
         bodyType: 'Coupe',
         engine: '4 cly 4.0L',
         MPG: '20/28',
-        name: 'mustang',
+        name: 'mustang GT',
         price: 149.00,
        },
        {
@@ -62,7 +62,7 @@ $(document).ready(function(){
         bodyType: 'Coupe',
         engine: '6 cly 5.0L',
         MPG: '18/25',
-        name: 'mer-sport',
+        name: 'mercedes GLA convertible',
         price: 249.00,
        }
     ];
@@ -75,7 +75,7 @@ $(document).ready(function(){
          bodyType: 'Sedan',
          engine: '4 cly 2.0L',
          MPG: '28/30',
-         name: 'hyu-sedan',
+         name: 'hyundai elentra',
          price: 39.00,
         },
         {
@@ -85,7 +85,7 @@ $(document).ready(function(){
          bodyType: 'Sedan',
          engine: '4 cly 3.2L',
          MPG: '24/29',
-         name: 'ford',
+         name: 'ford focus',
          price: 59.00,
         }
      ];
@@ -98,7 +98,7 @@ $(document).ready(function(){
          bodyType: 'SUV',
          engine: '6 cly 3.0L',
          MPG: '18/25',
-         name: 'hyu-suv',
+         name: 'hyundai sante',
          price: 100.00,
         },
         {
@@ -108,7 +108,7 @@ $(document).ready(function(){
          bodyType: 'SUV',
          engine: '6 cly 4.2L',
          MPG: '17/26',
-         name: 'mer-suv',
+         name: 'mercedes GLC',
          price: 199.00,
         }
      ];
@@ -127,7 +127,7 @@ $(document).ready(function(){
        })
 
        $('.rate p').text('$' + vehicleArray[vehicleIndex].price + '/day');
-
+       $('.vehicle-name').text(vehicleArray[vehicleIndex].name);
     }
 
     //function to change source and animation for Selected vehicle display
