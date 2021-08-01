@@ -1,0 +1,625 @@
+/* Import style sheet */
+@import url(Vehicles.css);
+
+
+body{
+    border: 1px solid red;
+    padding-bottom: 0px !important;
+}
+
+.body-content{
+    width: 100%;
+    height: 90vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.active-tab{
+    height: 80% !important;
+    width: 100%;
+}
+
+.process-tab{
+    height: 10%;
+    width: 100%;
+    transition: height 500ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+        /* Process Title */
+                .process-title{
+                    width: 100%;
+                    min-height: 100%;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding: 0px 0.5em;
+                }
+
+                .process-tab:nth-child(odd) .process-title{
+                    background-color: #00509d;
+                }
+
+                .process-tab:nth-child(even) .process-title{
+                    background-color: #fdc500;
+                }
+
+                .process-title p{
+                    font-size: 1.5em;
+                    color: white;
+                    opacity: 0.5;
+                }
+
+                .active-process-title{
+                    min-height: 10%;
+                    background-color: transparent !important;
+                }
+
+                .active-process-title p{
+                    font-size: 2em !important;
+                    color: #00509d;
+                    opacity: 1;
+
+                }
+
+                .go-back-button{
+                    font-size: 1.8em;
+                    margin-right: auto;
+                    color: #fdc500;
+                    display: none !important;
+                    cursor: pointer;
+                }
+
+                .active-back-btn{
+                    display: block !important;
+                }
+
+        /* Process content */
+                .process-content{
+                    width: 100%;
+                    height: 90%;
+                    position: relative;
+
+                }
+/* Reservation date tab */
+
+                /* Vehicle navigation */
+                .vehicles-nav-mobile{
+                    height: 15%;
+                }
+
+                .nav-icon-container{
+                    background-color: transparent;
+                    box-shadow: none;
+                }
+
+                .vehicles-links-container{
+                    box-shadow: none;
+                    padding-left: 1em;
+                }
+
+                .vehicle{
+                    width: auto;
+                }
+
+                /* Pickup & drop-off location */
+                .location-date-Container{
+                    width: 100%;
+                    height: 35%;
+                    padding: 0.5em 0em;
+                }
+
+                .container-heading{
+                    width: 90%;
+                    height: 25%;
+                    background-color: #fdc500; 
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .container-heading p{
+                    font-size: 1.3em;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    line-height: 100%;
+                    color: #00296b;
+                }
+
+                .container-heading i{
+                    font-size: 1.5em;
+                    color: #00296b;
+                }
+
+                /* Form container */
+                .form-container{
+                    border: 2px solid #00296b;
+                    border-top: none;
+                    width: 80%;
+                    height: 75%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .form{
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .form fieldset{
+                    width: 100%;
+                    height: 50%;
+                    border: none;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0px 1.5em;
+                }
+
+                .form fieldset:nth-child(1){
+                    border-bottom: 2px solid #00296b;
+                }
+
+                .form fieldset label{
+                    font-size: 1.1em;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    color: #00509d;
+                }
+
+                .form fieldset select, .form fieldset option{
+                    font-size: 1em;
+                    text-transform: capitalize;
+                    color: #00296b;
+                }
+
+                .form fieldset select{
+                    border: none;
+                    border-bottom: 1px solid #ffd500;
+                    padding: 0.5em;
+                }
+
+                .form fieldset select:focus{
+                    outline: none;
+                }
+
+                /* Reservation Date */
+                .location-date-Container:nth-child(odd) .container-heading{
+                    background-color: #00509d;
+                    color: #fdc500;
+                }
+
+                .location-date-Container:nth-child(odd) .container-heading p{
+                    color: #fdc500;
+                }
+
+                .location-date-Container:nth-child(odd) .container-heading i{
+                    color: #fdc500;
+                }
+
+                .form fieldset input{
+                    color: #00296b;
+                    font-size: 1em;
+                    width: 60%;
+                    text-align: center;
+                    border: none;
+                    border-bottom: 1px solid #ffd500;;
+                }
+
+                .form fieldset input:focus{
+                    outline: none;
+                }
+
+
+
+                /* Continue Button */
+                .next-btn{
+                    padding: 0.5em 1em;
+                    position: absolute;
+                    right: 0px;
+                    bottom: 0.5em;
+                    background-color: #ffd500;
+                    border: none;
+                    color: white;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    cursor: pointer;
+                }
+
+                
+
+
+/* Customer information tab */
+.customer-information-tab .process-content{
+    display: flex;
+    justify-content: center;
+
+}
+
+.customer-form-container{
+    width: 90%;
+    height: 80%;
+    border: 2px solid #00296b;
+    margin-top: 5%;
+}
+
+.customer-form-container form{
+    height: 100%;
+    width: 100%;
+}
+
+                .customer-form-container form fieldset{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    height: 50%;
+                    width: 100%;
+                    border: none;
+                }
+
+                .customer-form-container form legend{
+                    color: #00509d;
+                    text-transform: capitalize;
+                    font-size: 1.7em;
+                    font-weight: bold;
+                    padding-left: 0.5em;
+                    width: 100%;
+                }
+
+                .customer-form-container form legend i{
+                    font-size: 1em;
+                    color: #ffd500;
+                }
+
+                .customer-form-container form fieldset > div{
+                    display: flex;
+
+                }
+
+                .label-container{
+                    width: 50%;
+                }
+
+                .label-container label{
+                    font-size: 1.1em;
+                    color: #00296b;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    padding-left: 0.8em;
+                }
+
+                .input-container{
+                    width: 60%;
+                    padding-right: 1em;
+                }
+
+                .input-container input, .input-container select{
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    border-bottom: 3px solid #ffd500;
+                    font-size: 1em;
+                    text-transform: capitalize;
+                    color: #00296b;
+                }
+
+                .input-container input:focus, .input-container select:focus{
+                    outline: none;
+                    border-bottom: none;
+
+                }
+
+
+                /* Basic Information */
+
+
+/* Total Summary tab */
+.total-summary-tab{
+
+}
+
+
+
+@media only screen and (max-width: 850px) and (orientation: landscape){
+
+    .body-content{
+        height: auto;
+        display: block;
+    }
+
+    .process-tab{
+        height: 20vh !important;
+    }
+
+    .active-tab{
+        height: 250vh !important;
+    }
+}
+
+@media only screen 
+   and (min-width : 768px) {
+    .process-title{
+        padding: 0px 2em;
+    }
+    .process-title p{
+        font-size: 2.5em;
+    }
+
+    .active-process-title p{
+        font-size: 3em !important;
+    }
+
+    .go-back-button{
+        font-size: 3em;
+    }
+
+        /* Reservation date tab */
+        .vehicles-nav-mobile{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .location-date-Container{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1em 2em;
+        }
+
+        .container-heading p, .container-heading i{
+            font-size: 1.9em;
+            
+        }
+
+        .form fieldset label{
+            font-size: 1.4em;
+        }
+
+        .form fieldset select, .form fieldset option{
+            font-size: 1.2em;
+        }
+
+        .form fieldset input{
+            font-size: 1.2em;
+        }
+
+        .next-btn{
+            font-size: 1.5em;
+            bottom: 1em;
+        }
+
+        /* Customer information tab */
+        .customer-form-container{
+            width: 80%;
+        }
+
+
+        .customer-form-container form legend{
+            font-size: 2.2em;
+            margin-bottom: 0%;
+        }
+
+        .label-container label{
+            font-size: 1.5em;
+        }
+
+        .input-container input, .input-container select{
+            font-size: 1.3em;
+        }
+
+   }
+
+@media only screen 
+   and (min-width : 768px) and (orientation: landscape){
+       .vehicles-nav-mobile{
+           width: 50%;
+       }
+
+       .location-date-Container{
+           width: 60%;
+           height: 40%;
+       }
+
+       .container-heading p, .container-heading i{
+        font-size: 1.6em;
+        
+    }
+   }
+
+@media only screen 
+   and (min-width : 1200px) {
+   .body-content{
+       flex-direction: row;
+   }
+   .active-tab{
+       height: 100% !important;
+       width: auto;
+   }
+   .process-tab{
+       height: 100%;
+       width: auto;
+   }
+
+   .process-title{
+       background-color: transparent !important;
+       min-height: 10%;
+   }
+
+   .process-title p{
+    font-size: 2em;
+    color: #00509d;
+    opacity: 1;
+    }
+
+    .active-process-title p{
+        font-size: 2em !important;
+    }
+
+    .go-back-button{
+        font-size: 2em;
+        display: block !important;
+    }
+
+       /* Reservation date tab */
+       .reservation-date-tab{
+        width: 30%;
+        border-right: 3px solid #ffd500;
+        }
+       .vehicles-nav-mobile{
+        width: 100%;
+        border: none
+        }
+
+        .nav-icon-container{
+            height: 40%;
+        }
+
+        .nav-icon-container img{
+            height: 100%;
+            width: auto;
+        }
+
+        .vehicles-links-container{
+            height: 60%;
+            width: 100%;
+        }
+
+        .vehicles-tab{
+            flex-direction: row;
+        }
+
+        .vehicle{
+            height: 100%;
+            width: auto;
+            border:none;
+            margin-right: 5%;
+        }
+
+        .vehicle img{
+            height: 100%;
+            width: auto;
+            transform: translateX(0em);
+        }
+
+        .location-date-Container{
+            width: 90%;
+            height: 35%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1em ;
+        }
+
+        .container-heading p, .container-heading i{
+            font-size: 1.5em;
+        }
+
+        .form fieldset label{
+            font-size: 1.2em;
+        }
+
+        .form fieldset select, .form fieldset option{
+            font-size: 1em;
+        }
+
+        .form fieldset input{
+            font-size: 1em;
+        }
+  
+
+           /* Customer information tab */
+           
+.customer-information-tab{
+    width: 40%;
+    border-right: 3px solid #ffd500;
+
+}
+        .customer-form-container{
+            width: 90%;
+        }
+
+
+        .customer-form-container form legend{
+            font-size: 1.8em;
+            margin-bottom: 0%;
+        }
+
+        .label-container label{
+            font-size: 1.3em;
+        }
+
+        .input-container input, .input-container select{
+            font-size: 1em;
+        }
+
+   .total-summary-tab{
+       width: 30%;
+   }
+}
+
+
+@media only screen 
+   and (min-width : 1600px) {
+    .process-title p{
+        font-size: 2.2em;
+    }
+
+    .active-process-title p{
+        font-size: 2.2em !important;
+    }
+
+    .go-back-button{
+        font-size: 2.5em;
+    }
+
+        /* Reservation Date */
+        .container-heading p, .container-heading i{
+            font-size: 1.8em;
+        }
+
+        .form fieldset label{
+            font-size: 1.5em;
+        }
+
+        .form fieldset select, .form fieldset option{
+            font-size: 1.1em;
+        }
+
+        .form fieldset input{
+            font-size: 1.1em;
+        }
+
+        .next-btn{
+            font-size: 2em;
+            bottom: 1em;
+        }
+
+
+        /* Customer information tab */
+        
+                .customer-form-container form legend{
+                    font-size: 2em;
+                    margin-bottom: 0%;
+                }
+        
+                .label-container label{
+                    font-size: 1.5em;
+                }
+        
+                .input-container input, .input-container select{
+                    font-size: 1.2em;
+                }
+        
+           .total-summary-tab{
+               width: 30%;
+           }
+
+   }

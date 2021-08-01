@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Reservation</title>
+    <link href="CSS/ReservationBooking.css" rel="stylesheet"/>
+    <link href="CSS/Navigation.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="nav-container">
+        <img class="company-logo" src="Photos/Logo/Logo.png"/>
+        <div class="mobile-menu-icon">
+            <span class="first regular"></span>
+            <span class="regular"></span>
+            <span class="regular"></span>
+        </div>
+        <div class="laptop-nav">
+            <nav>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <span></span>
+                    <li><a href="vehicles.html">All Vehicles</a></li>
+                    <span></span>
+                    <li><a href="" class="active-page">Book Us</a></li>
+                    <span></span>
+                    <li><a href="">Manage Reservation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="mobile-nav hide-menu">
+        <nav>
+            <ul>
+                <li class="roll-up"><a href="index.html" >Home</a></li>
+                <span></span>
+                <li class="roll-up"><a href="vehicles.html">All Vehicles</a></li>
+                <span></span>
+                <li class="roll-up"><a href="" class="active-page">Book Us</a></li>
+                <span></span>
+                <li class="roll-up"><a href="">Manage Reservation</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="body-content">
+
+        <div class="process-tab reservation-date-tab active-tab">
+            <div class="process-title active-process-title">
+                <p>1. pick a date</p>
+            </div>
+
+            <div class="process-content">
+                <div class="vehicles-nav-mobile">
+                    <div class="nav-icon-container">
+                        <img id="sport-icon" class="nav-icon" src="Photos/car-icons/sport-car-selected.png" alt="sport-car"/>
+                        <span></span>
+                        <img id="sedan-icon" class="nav-icon" src="Photos/car-icons/sedan.png" alt="sedan"/>
+                        <span></span>
+                        <img id="suv-icon" class="nav-icon" src="Photos/car-icons/suv.png" alt="suv"/>
+                    </div>
+                    <div class="vehicles-links-container">
+                        <div id="sport-cars-tab" class="vehicles-tab">
+                            <div class="vehicle">
+                                <img src="Photos/Sport/mustang.png">
+                            </div>
+                            <div class="vehicle">
+                                <img src="Photos/Sport/Mer-sport.png">
+                            </div>
+                            
+                        </div>
+                        <div id="sedan-tab" class="vehicles-tab hide-tab">
+                            <div class="vehicle">
+                                <img src="Photos/Sedan/Hyu-white.png">
+                            </div>
+                            <div class="vehicle">
+                                <img src="Photos/Sedan/ford.png">
+                            </div>
+                            
+                        </div>
+                        <div id="suv-tab" class="vehicles-tab hide-tab">
+                            <div class="vehicle">
+                                <img src="Photos/SUV/hyu-suv.png">
+                            </div>
+                            <div class="vehicle">
+                                <img src="Photos/SUV/Mer-suv.png">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="location-date-Container">
+                    <div class="container-heading">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>pick up & drop off</p>
+                    </div>
+
+                    <div class="form-container">
+                        <form class="form">
+                            <fieldset>
+                                <label for="pick-up-selection">pick up: </label>
+                                <select id="pick-up-selection" name="pick-up-selection" required>
+                                    <option>louisville, KY</option>
+                                    <option>cincinnati, OH</option>
+                                    <option>atlanta, GA</option>
+                                    <option>chicago, IL</option>
+                                    <option>orlando, FL</option>
+                                </select>
+                            </fieldset>
+
+                            <fieldset>
+                                <label for="drop-off-selection">drop off: </label>
+                                <select id="drop-off-selection" name="drop-off-selection" required>
+                                    <option>louisville, KY</option>
+                                    <option>cincinnati, OH</option>
+                                    <option>atlanta, GA</option>
+                                    <option>chicago, IL</option>
+                                    <option>orlando, FL</option>
+                                </select>
+        
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="location-date-Container">
+                    <div class="container-heading">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p> reservation date</p>
+                    </div>
+
+                    <div class="form-container">
+                        <form class="form">
+                            <fieldset>
+                                <label for="pick-up-selection">From: </label>
+                                <input type="text" id="start-date" name="start-date" placeholder="mm/dd/yyyy" required/>
+                            </fieldset>
+                            
+                            <fieldset>
+                                <label for="drop-off-selection">To: </label>
+                                <input type="text" id="end-date" name="end-date" placeholder="mm/dd/yyyy" required/>
+        
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <button class="next-btn" type="button">continue</button>
+            </div>
+
+            
+        </div>
+
+        <div class="process-tab customer-information-tab">
+            <div class="process-title">
+                <i class="fas fa-chevron-circle-left go-back-button"></i>
+                <p>2. customer infor.</p>
+            </div>
+
+            <div class="process-content">
+                <div class="customer-form-container">
+                    <form>
+                        <fieldset class="basic-infor">
+                            <legend><i class="fas fa-user"></i> basic infor.</legend>
+                                <div>
+                                    <div class="label-container">
+                                        <label for="first-name">first name:</label>
+                                    </div>
+
+                                    <div class="input-container">
+                                        <input type="text" id="first-name" name="first-name"/>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="label-container">
+                                        <label for="last-name">last name:</label>
+                                    </div>
+
+                                    <div class="input-container">
+                                        <input type="text" id="last-name" name="last-name"/>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="label-container">
+                                        <label for="age-selection">age:</label>
+                                    </div>
+
+                                    <div class="input-container">
+                                       <select id="age-selection" name="age-selection">
+                                            <option>under 25</option>
+                                            <option>25</option>
+                                            <option>26</option>
+                                            <option>27</option>
+                                            <option>28</option>
+                                            <option>29</option>
+                                            <option>30</option>
+                                            <option>30+</option>
+                                       </select>
+                                    </div>
+                                </div>
+
+                        </fieldset>
+
+
+                        <fieldset class="contact-infor">
+                            <legend><i class="fas fa-address-book"></i> contact infor.</legend>
+                                <div>
+                                    <div class="label-container">
+                                        <label for="email">email:</label>
+                                    </div>
+
+                                    <div class="input-container">
+                                        <input type="email" id="email" name="email"/>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="label-container">
+                                        <label for="phone-number">phone:</label>
+                                    </div>
+
+                                    <div class="input-container">
+                                        <input type="tel" id="phone-number" name="phone-number"/>
+                                    </div>
+                                </div>
+
+
+                        </fieldset>
+                    </form>
+                </div>
+
+                <button class="next-btn" type="button">continue</button>
+
+            </div>
+        </div>
+
+        <div class="process-tab total-summary-tab">
+            <div class="process-title">
+                <i class="fas fa-chevron-circle-left go-back-button"></i>
+                <p>3. total summary</p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="page-footer">
+            <img src="Photos/Logo/Logo.png"/>
+            <button type="button"><i class="fas fa-arrow-up"></i></button>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e23e09cf11.js" crossorigin="anonymous"></script>
+    <script src="JS/navigation.js"></script>
+    <script src="JS/ReservationBooking.js"></script>
+    <script src="JS/Vehicles.js"></script>
+</body>
+</html>
