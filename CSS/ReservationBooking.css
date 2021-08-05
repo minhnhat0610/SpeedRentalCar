@@ -3,7 +3,6 @@
 
 
 body{
-    border: 1px solid red;
     padding-bottom: 0px !important;
 }
 
@@ -84,7 +83,12 @@ body{
                     width: 100%;
                     height: 90%;
                     position: relative;
+                    opacity: 0;
+                    transition: opacity 300ms ease-in-out 350ms;
+                }
 
+                .process-tab:first-child .process-content{
+                    opacity: 1;
                 }
 /* Reservation date tab */
 
@@ -104,8 +108,14 @@ body{
                 }
 
                 .vehicle{
-                    width: auto;
+                    width: 25%;
                 }
+
+                .reserved-vehicle{
+                    border: 3px solid #00509d !important;
+                    border-radius: 10% !important;
+                }
+
 
                 /* Pickup & drop-off location */
                 .location-date-Container{
@@ -210,13 +220,38 @@ body{
                     width: 60%;
                     text-align: center;
                     border: none;
-                    border-bottom: 1px solid #ffd500;;
+                    border-bottom: 1px solid #ffd500;
+                    border-radius: none;
+                    -webkit-appearance: none;
                 }
 
                 .form fieldset input:focus{
                     outline: none;
                 }
 
+                /*Flat Picker styling */
+                .flatpickr-calendar span,.flatpickr-calendar option, .flatpickr-calendar input{
+                    color: #00296b !important;
+                }
+                
+                .flatpickr-calendar select{
+                    color: #00509d !important;
+                    font-weight: bold !important;
+                }
+                .flatpickr-day.selected{
+                    background: #fdc500 !important;
+                    border-color: #fdc500 !important;
+                    color: white !important;
+                }
+
+                .flatpickr-day.today{
+                    border-color: #fdc500 !important;
+                }
+
+                .flatpickr-day.flatpickr-disabled{
+                    color: rgb(57, 57, 57, 0.3) !important
+                }
+  
 
 
                 /* Continue Button */
@@ -249,6 +284,12 @@ body{
     height: 80%;
     border: 2px solid #00296b;
     margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .customer-form-container form{
@@ -307,8 +348,9 @@ body{
                     border: none;
                     border-bottom: 3px solid #ffd500;
                     font-size: 1em;
-                    text-transform: capitalize;
                     color: #00296b;
+                    border-radius: none;
+                    -webkit-appearance: none;
                 }
 
                 .input-container input:focus, .input-container select:focus{
@@ -322,8 +364,73 @@ body{
 
 
 /* Total Summary tab */
-.total-summary-tab{
 
+.total-infor-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em ;
+    justify-content: space-between;
+}
+
+.label p{
+    color: #00296b;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.total-infor-detail input{
+    color: #00509d;
+    font-size: 1em;
+    text-transform: capitalize;
+    padding-left: 5%;
+    font-style: italic;
+    border-radius: none;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+.total-infor-detail input:focus{
+    outline: none;
+}
+
+.divider{
+    width: 90%;
+    height: 0px;
+    border-top: 3px solid #ffd500;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#total-label p{
+    font-size: 2em;
+}
+
+
+#total-figure input{
+    font-size: 2em;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+}
+
+.confirm-btn{
+    padding: 0.5em 1em;
+    position: absolute;
+    right: 0px;
+    bottom: 0.5em;
+    background-color: #00509d;
+    border: none;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
 
@@ -368,6 +475,10 @@ body{
             margin-right: auto;
         }
 
+        .vehicle{
+            width: 20%;
+        }
+
         .location-date-Container{
             width: 80%;
             margin-left: auto;
@@ -392,7 +503,7 @@ body{
             font-size: 1.2em;
         }
 
-        .next-btn{
+        .next-btn, .confirm-btn{
             font-size: 1.5em;
             bottom: 1em;
         }
@@ -416,10 +527,24 @@ body{
             font-size: 1.3em;
         }
 
+
+        /* Total Summary tab */
+        .label p{
+            font-size: 1.5em;
+        }
+
+        .total-infor-detail input{
+            font-size: 1.3em;
+        }
+
+        #total-label p ,#total-figure input{
+            font-size: 2.5em;
+        }
+
    }
 
 @media only screen 
-   and (min-width : 768px) and (orientation: landscape){
+   and (min-width : 851px) and (orientation: landscape){
        .vehicles-nav-mobile{
            width: 50%;
        }
@@ -447,6 +572,63 @@ body{
    .process-tab{
        height: 100%;
        width: auto;
+       position: relative;
+   }
+
+   /* process tab's blur foreground for laptop version */
+   .blur-foreground{
+       width: 100%;
+       height: 100%;
+       background-color: rgb(255, 255, 255, 0.5);
+       position: absolute;
+       z-index: 5;
+       animation: 500ms ease-in-out 1 normal forwards;
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+   }
+
+   @keyframes hideTab {
+       0%{
+           transform: translateX(-100%);
+       }
+
+       100%{
+           transform: translateX(0%);
+       }
+   }
+
+   @keyframes showTab {
+       0%{
+           transform: translateX(0%);
+       }
+
+       100%{
+        transform: translateX(100%);
+        }
+    }
+
+    @keyframes hideTabReverse {
+        0%{
+            transform: translateX(0%);
+        }
+ 
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes showTabReverse {
+        0%{
+            transform: translateX(100%);
+        }
+ 
+        100%{
+            transform: translateX(0%);
+        }
+    }
+
+   .process-tab:first-child .blur-foreground{
+       transform: translateX(-100%);
    }
 
    .process-title{
@@ -466,7 +648,10 @@ body{
 
     .go-back-button{
         font-size: 2em;
-        display: block !important;
+    }
+
+    .process-content{
+        opacity: 1;
     }
 
        /* Reservation date tab */
@@ -533,9 +718,8 @@ body{
         .form fieldset input{
             font-size: 1em;
         }
-  
 
-           /* Customer information tab */
+/* Customer information tab */
            
 .customer-information-tab{
     width: 40%;
@@ -560,9 +744,24 @@ body{
             font-size: 1em;
         }
 
-   .total-summary-tab{
+
+        /* Total Summary tab */
+
+.total-summary-tab{
        width: 30%;
    }
+
+        .label p{
+            font-size: 1.3em;
+        }
+
+        .total-infor-detail input{
+            font-size: 1em;
+        }
+
+        #total-label p ,#total-figure input{
+            font-size: 2.5em;
+        }
 }
 
 
@@ -597,7 +796,7 @@ body{
             font-size: 1.1em;
         }
 
-        .next-btn{
+        .next-btn, .confirm-btn{
             font-size: 2em;
             bottom: 1em;
         }
@@ -617,9 +816,26 @@ body{
                 .input-container input, .input-container select{
                     font-size: 1.2em;
                 }
+
+        /* Total Summary tab */
         
            .total-summary-tab{
                width: 30%;
            }
+
+           
+            .label p{
+                font-size: 1.5em;
+            }
+
+            .total-infor-detail input{
+                font-size: 1.2em;
+            }
+
+            #total-label p ,#total-figure input{
+                font-size: 2.5em;
+            }
+
+        
 
    }

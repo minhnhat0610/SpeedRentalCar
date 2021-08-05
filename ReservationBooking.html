@@ -7,6 +7,8 @@
     <title>Make a Reservation</title>
     <link href="CSS/ReservationBooking.css" rel="stylesheet"/>
     <link href="CSS/Navigation.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 </head>
 <body>
     <div class="nav-container">
@@ -47,6 +49,10 @@
     <div class="body-content">
 
         <div class="process-tab reservation-date-tab active-tab">
+
+            <div class="blur-foreground"></div>
+
+
             <div class="process-title active-process-title">
                 <p>1. pick a date</p>
             </div>
@@ -63,7 +69,7 @@
                     <div class="vehicles-links-container">
                         <div id="sport-cars-tab" class="vehicles-tab">
                             <div class="vehicle">
-                                <img src="Photos/Sport/mustang.png">
+                                <img class="reserved-vehicle" src="Photos/Sport/mustang.png">
                             </div>
                             <div class="vehicle">
                                 <img src="Photos/Sport/Mer-sport.png">
@@ -155,6 +161,10 @@
         </div>
 
         <div class="process-tab customer-information-tab">
+
+            <div class="blur-foreground"></div>
+
+
             <div class="process-title">
                 <i class="fas fa-chevron-circle-left go-back-button"></i>
                 <p>2. customer infor.</p>
@@ -171,7 +181,7 @@
                                     </div>
 
                                     <div class="input-container">
-                                        <input type="text" id="first-name" name="first-name"/>
+                                        <input type="text" id="first-name" name="first-name" required/>
                                     </div>
                                 </div>
 
@@ -181,7 +191,7 @@
                                     </div>
 
                                     <div class="input-container">
-                                        <input type="text" id="last-name" name="last-name"/>
+                                        <input type="text" id="last-name" name="last-name" required/>
                                     </div>
                                 </div>
 
@@ -191,8 +201,8 @@
                                     </div>
 
                                     <div class="input-container">
-                                       <select id="age-selection" name="age-selection">
-                                            <option>under 25</option>
+                                       <select id="age-selection" name="age-selection" required>
+                                            <option>Under 25</option>
                                             <option>25</option>
                                             <option>26</option>
                                             <option>27</option>
@@ -215,7 +225,7 @@
                                     </div>
 
                                     <div class="input-container">
-                                        <input type="email" id="email" name="email"/>
+                                        <input type="email" id="email" name="email" required/>
                                     </div>
                                 </div>
 
@@ -225,7 +235,7 @@
                                     </div>
 
                                     <div class="input-container">
-                                        <input type="tel" id="phone-number" name="phone-number"/>
+                                        <input type="tel" id="phone-number" name="phone-number" required/>
                                     </div>
                                 </div>
 
@@ -240,9 +250,75 @@
         </div>
 
         <div class="process-tab total-summary-tab">
+
+            <div class="blur-foreground"></div>
+
             <div class="process-title">
                 <i class="fas fa-chevron-circle-left go-back-button"></i>
                 <p>3. total summary</p>
+            </div>
+
+            <div class="process-content">
+                <div class="customer-form-container">
+                    <div class="total-infor-container">
+                        <div class="label">
+                            <p>vehicle name:</p>
+                        </div>
+                        <div class="total-infor-detail">
+                            <input type="text" id="vehicle-name" name="vehicle-name" readonly/>
+                        </div>
+                    </div>
+
+                    <div class="total-infor-container">
+                        <div class="label">
+                            <p>rate:</p>
+                        </div>
+                        <div class="total-infor-detail">
+                            <input type="text" id="vehicle-price" name="vehicle-price" readonly/>
+
+                        </div>
+                    </div>
+
+                    <div class="total-infor-container">
+                        <div class="label">
+                            <p>num. of days:</p>
+                        </div>
+                        <div class="total-infor-detail">
+                            <input type="text" id="num-of-day" name="num-of-day" readonly/>
+                        </div>
+                    </div>
+
+                    <div class="total-infor-container">
+                        <div class="label">
+                            <p>tax:</p>
+                        </div>
+                        <div class="total-infor-detail">
+                            <input type="text" id="tax-amount" name="tax-amount" readonly/>
+                        </div>
+                    </div>
+                    
+                    <div class="total-infor-container">
+                        <div class="label">
+                            <p>other fee:</p>
+                        </div>
+                        <div class="total-infor-detail">
+                            <input type="text" id="other-fee" name="other-fee" readonly/>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="total-infor-container">
+                        <div class="label" id="total-label">
+                            <p>total:</p>
+                        </div>
+                        <div class="total-infor-detail" id="total-figure">
+                            <input type="text" id="total-amount" name="total-amount" readonly/>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="confirm-btn" type="submit">confirm</button>
             </div>
         </div>
 
@@ -261,6 +337,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e23e09cf11.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="JS/navigation.js"></script>
     <script src="JS/ReservationBooking.js"></script>
     <script src="JS/Vehicles.js"></script>

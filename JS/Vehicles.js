@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
     //click event on vehicles navigation
     const sportIcon = "Photos/car-icons/sport-car.png";
     const sportIconSelected = "Photos/car-icons/sport-car-selected.png";
@@ -183,6 +182,8 @@ $(document).ready(function(){
         },1000)
     })
 
-
+// export car objects to outsider use
+exports = {sportCar, SedanCar, SUVCar};
     
 })
+
