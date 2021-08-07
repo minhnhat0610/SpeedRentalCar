@@ -12,6 +12,7 @@ body{
     max-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .active-tab{
@@ -221,8 +222,8 @@ body{
                     text-align: center;
                     border: none;
                     border-bottom: 1px solid #ffd500;
-                    border-radius: none;
-                    -webkit-appearance: none;
+                    border-radius: 0 !important;
+                    -webkit-appearance: none !important;
                 }
 
                 .form fieldset input:focus{
@@ -349,8 +350,8 @@ body{
                     border-bottom: 3px solid #ffd500;
                     font-size: 1em;
                     color: #00296b;
-                    border-radius: none;
-                    -webkit-appearance: none;
+                    border-radius: 0 !important;
+                    -webkit-appearance: none !important;
                 }
 
                 .input-container input:focus, .input-container select:focus{
@@ -387,10 +388,10 @@ body{
     text-transform: capitalize;
     padding-left: 5%;
     font-style: italic;
-    border-radius: none;
+    border-radius: 0 !important;
     border: none;
-    appearance: none;
-    -webkit-appearance: none;
+    appearance: none !important;
+    -webkit-appearance: none !important;
     width: 100%;
     text-overflow: ellipsis;
 }
@@ -433,6 +434,95 @@ body{
     cursor: pointer;
 }
 
+/* Loader screen */
+
+.loader-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    display: none;
+}
+
+.show-loader{
+    display: flex;
+}
+
+.loader{
+    width: 10em;
+    height: 10em;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.loader-ring1{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid white;
+    border-top: none;
+    border-right: 5px solid #fdc500;
+    border-bottom: 5px solid #fdc500;
+    position: absolute;
+    animation: loader1 1.2s linear infinite;
+}
+
+@keyframes loader1 {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.loader-ring2{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    border: 5px solid white;
+    border-right: 5px solid #00509d;
+    border-bottom: none;
+    position: absolute;
+    animation: loader2 1s linear infinite;
+
+}
+
+@keyframes loader2 {
+    0%{
+        transform: rotate(360deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.logo-loader{
+    width: 70%;
+    height: auto;
+    animation: loader3 0.5s linear infinite alternate;
+}
+
+@keyframes loader3 {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1; 
+    }
+}
 
 
 @media only screen and (max-width: 850px) and (orientation: landscape){

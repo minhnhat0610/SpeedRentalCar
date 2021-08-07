@@ -206,15 +206,19 @@
 
 
         .rate button{
-            font-size: 1.5em;
             padding: 0.5em 1em;
             border: none;
             background-color: #fdc500;
             border-radius: 5px;
-            color: white;
             text-transform: capitalize;
             cursor: pointer;
 
+        }
+
+        .rate button a{
+            font-size: 1em;
+            color: white;
+            text-decoration: none;
         }
 
 

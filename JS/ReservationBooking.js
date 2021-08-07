@@ -267,6 +267,9 @@ $('.go-back-button').on('click', function(e){
 })
 
 
+$('.confirm-btn').on('click',function(){
+    $('.loader-container').addClass('show-loader');
+})
 
 
 // end of Document ready call back

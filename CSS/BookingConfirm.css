@@ -1,0 +1,169 @@
+:root{
+    --logo-width: 9em;
+}
+
+body{
+    padding-bottom: 0px !important;
+}
+
+.body-content{
+    width: 100%;
+    height: 90vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: calc(var(--logo-width)/2 + 1em) 0px;
+}
+
+/* Gratitude container */
+.gratitude-container{
+    width: 80%;
+    height: auto;
+    border: 3px solid #ffd500;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: scale(0,1);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Company Logo */
+
+.gratitude-logo{
+    width: var(--logo-width);
+    height: var(--logo-width);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+    0 0.2px 2.2px rgba(0, 0, 0, 0.034),
+    0 0.6px 5.2px rgba(0, 0, 0, 0.048),
+    0 1.1px 9.8px rgba(0, 0, 0, 0.06),
+    0 2px 17.4px rgba(0, 0, 0, 0.072),
+    0 3.8px 32.6px rgba(0, 0, 0, 0.086),
+    0 9px 78px rgba(0, 0, 0, 0.12);  
+    position: absolute;
+    top: calc(var(--logo-width)/2 * -1);
+    background-color: white;
+    transform: scale(0,0);
+    transition: transform 0.5s ease-in-out 0.5s;
+}
+
+.gratitude-logo img {
+    width: 90%;
+    height: auto;
+
+}
+
+.gratitude-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: calc(var(--logo-width)/2);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out 1s;
+
+}
+
+.gratitude-statement{
+    font-size: 2em;
+    color: #fdc500;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-top: 0px;
+    margin-bottom: 5%;
+    transform: translateY(-50%);
+    transition: 0.5s ease-in-out 1s;
+    transition-property: transform, opacity;
+}
+
+.confirmation{
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+    color: #003f88;
+    font-style: italic;
+}
+
+.confirmation-code{
+    font-size: 1.5em;
+    color: #fdc500;
+}
+
+
+.extra-infor p{
+    color: #00296b;
+    padding: 1em;
+}
+
+.extra-infor a{
+    color: #00509d;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+@media only screen and (max-width: 850px) and (orientation: landscape){
+    
+}
+
+
+@media only screen 
+   and (min-width : 768px) {
+    :root{
+        --logo-width: 13em;
+    }
+
+    .gratitude-statement{
+        font-size: 2.5em;
+    }
+
+    .confirmation{
+        font-size: 1.8em;
+    }
+
+    .extra-infor p{
+        font-size: 1.2em;
+    }
+}
+
+
+@media only screen 
+   and (min-width : 851px) and (orientation: landscape){
+
+
+}
+
+@media only screen 
+   and (min-width : 1200px) {
+   .gratitude-container{
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+   }
+}
+
+@media only screen 
+   and (min-width : 1600px) {
+    .gratitude-statement{
+        font-size: 3em;
+    }
+
+    .confirmation{
+        font-size: 2em;
+    }
+
+    .extra-infor p{
+        font-size: 1.5em;
+    }
+}
