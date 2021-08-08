@@ -17,6 +17,7 @@ $(document).ready(function(){
         $(".mobile-nav").toggleClass('hide-menu');
         showMenuLinksMobile();
         $('.mobile-nav ul li').toggleClass("roll-up");
+        $('.nav-container').toggleClass('nav-container-sticky');
 
     })
 

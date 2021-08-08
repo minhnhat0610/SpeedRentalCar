@@ -195,6 +195,8 @@ body{
                     border: none;
                     border-bottom: 1px solid #ffd500;
                     padding: 0.5em;
+                    border-radius: 0 !important;
+                    -webkit-appearance: none !important;
                 }
 
                 .form fieldset select:focus{
@@ -469,7 +471,6 @@ body{
     height: 100%;
     border-radius: 50%;
     border: 5px solid white;
-    border-top: none;
     border-right: 5px solid #fdc500;
     border-bottom: 5px solid #fdc500;
     position: absolute;
@@ -492,7 +493,6 @@ body{
     border-radius: 50%;
     border: 5px solid white;
     border-right: 5px solid #00509d;
-    border-bottom: none;
     position: absolute;
     animation: loader2 1s linear infinite;
 
