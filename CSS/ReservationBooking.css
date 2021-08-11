@@ -193,7 +193,7 @@ body{
 
                 .form fieldset select{
                     border: none;
-                    border-bottom: 1px solid #ffd500;
+                    border-bottom: 3px solid #ffd500;
                     padding: 0.5em;
                     border-radius: 0 !important;
                     -webkit-appearance: none !important;
@@ -223,7 +223,7 @@ body{
                     width: 60%;
                     text-align: center;
                     border: none;
-                    border-bottom: 1px solid #ffd500;
+                    border-bottom: 3px solid #ffd500;
                     border-radius: 0 !important;
                     -webkit-appearance: none !important;
                 }

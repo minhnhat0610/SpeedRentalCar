@@ -84,7 +84,7 @@
     }
     .vehicle{
         height: 80%;
-        width: 30%;
+        width: auto;
         display: flex;
         align-items: stretch;
         margin-right: 5%;
@@ -94,7 +94,7 @@
         width: auto;
         height: 100%;
         cursor: pointer;
-
+        object-fit: contain;
     }
 
     .vehicle svg{
@@ -344,9 +344,9 @@
 
 @media only screen 
    and (min-width : 768px) {
-       .vehicle{
+       /* .vehicle{
            width: 20%;
-       }
+       } */
         .gutter{
             width: 20%;
         }

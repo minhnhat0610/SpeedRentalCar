@@ -1,0 +1,513 @@
+.body-content{
+    width: 100%;
+    height: auto;
+}
+
+.body-inner-container{
+    width: 100%;
+    height: auto;
+    background: rgb(255,213,0);
+background: linear-gradient(45deg, rgba(255,213,0,1) 0%, rgba(238,255,104,1) 100%); 
+    position: relative;
+}
+
+/* Form Container */
+.form-container{
+    width: 100%;
+    height: 90vh;
+    background-image: url("../Photos/Feature/Feature-backgr.jpg");
+    background-position: 55% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 3;
+}
+
+.form-container *{
+    z-index: 4;
+    position: relative;
+}
+
+
+.form-container::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
+    z-index: 3;
+}
+
+
+            .form-title{
+                font-size: 3em;
+                font-weight: bold;
+                font-style: italic;
+                text-transform: capitalize;
+                color: #ffd500;
+                text-align: center;
+                padding: 0px 0.5em;
+                text-shadow: 2px 2px 20px rgb(0, 0, 0, 0.5);
+            }
+
+            .form-container form{
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 5em 1em;
+            }
+
+            .input-container{
+                width: 100%;
+                height: auto;
+                border: none;
+            }
+
+            .input-row{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-bottom: 10%;
+            }
+
+            .input-row label{
+                font-size: 1.5em;
+                text-transform: capitalize;
+                color: white;
+                font-weight: 500;
+                width: 50%;
+                height: 100%;
+            }
+
+            .input-row input{
+                width: 45%;
+                font-size: 1.3em;
+                color: whitesmoke;
+                border-radius: 5px;
+                background-color: rgb(0, 0, 0, 0.3);
+                padding: 0.2em;
+                backdrop-filter: blur(3px);
+                -webkit-backdrop-filter: blur(3px);
+                border: none;
+            }
+
+            .input-row input:focus{
+                outline: none;
+                border: 0.5px solid white;
+            }
+
+            .submit-button{
+                padding: 1em;
+                border: none ;
+                background-color: transparent;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .submit-button i {
+                font-size: 3em;
+                color: #fdc500;
+            }
+
+            .loader{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                border-radius: 50%;
+                border: 5px dashed white;
+                animation: spin 1s infinite ease-in-out alternate;
+                display: none;
+            }
+
+            .loading{
+                display: block;
+            }
+
+            @keyframes spin {
+                0%{
+                    transform: rotate(0deg);
+                    opacity: 0;
+                }
+
+                100%{
+                    transform: rotate(360deg);
+                    opacity: 1;
+                }
+            }
+
+
+/* Customer information container */
+
+.customer-infor-container{
+    width: 100%;
+    height: calc(130vh + var(--vehicle-heigh)/2 + 25vh) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+    .container-title{
+        height: auto;
+        width: 100%;
+        padding: 1.5em 0.5em;
+        margin-bottom: 5%;
+    }
+
+        .container-title p {
+            width: max-content;
+            font-size: 2em;
+            text-transform: capitalize;
+            font-weight: bold;
+            color: #00509d;
+            border-bottom: 3px solid white;
+        }
+
+        .container-title i {
+            font-size: 1.2em;
+            color: #00296b;
+        }
+
+    .infor-content{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+                .content-row{
+                    width: 100%;
+                    height: auto;
+                    padding: 1em;
+                }
+
+                .content-row label{
+                    font-size: 1.3em;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    color: #00296b;
+                    margin-right: 5%;
+                }
+
+                .content-row input{
+                    font-size: 1.1em;
+                    text-transform: capitalize;
+                    color: #003f88;
+                    font-style: italic;
+                    background-color: transparent;
+                    border: none;
+                    width: 50%;
+                }
+
+                .content-row input:focus{
+                    outline: none;
+                }
+
+                .cancel-button{
+                    margin-top: 5%;
+                    padding: 0.5em 1em;
+                    font-size: 1.3em;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    color: white;
+                    background-color: red;
+                    border: none;
+                    border-radius: 5px;
+                    width: max-content;
+                    margin-right: auto;
+                    margin-left: auto;
+                    cursor: pointer;
+                }
+
+/* Vehicle-infor-container */
+.vehicle-infor-container{
+    width: 100%;
+    height: 25%;
+    position: fixed;
+    bottom: 0px;
+    z-index: 1;
+    display: flex;
+
+}
+
+.vehicle-infor-container::after{
+    content: "";
+    width: 140%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    left: -20%;
+    background-color: white;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    box-shadow:
+    0 -1.3px 2.5px rgba(0, 0, 0, 0.025),
+    0 -3.2px 6.1px rgba(0, 0, 0, 0.036),
+    0 -6px 11.5px rgba(0, 0, 0, 0.045),
+    0 -10.7px 20.5px rgba(0, 0, 0, 0.054),
+    0 -20.1px 38.4px rgba(0, 0, 0, 0.065),
+    0 -48px 92px rgba(0, 0, 0, 0.09)
+  ;
+  
+}
+
+:root{
+    --vehicle-heigh: 10em
+}
+
+.vehicle-inner-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    transform: translateY(calc(var(--vehicle-heigh)/2 * -1));
+    position: relative;
+    z-index: 3;
+}
+
+.vehicle-infor-container img{
+    width: auto;
+    height: var(--vehicle-heigh);
+    object-fit: contain;
+}
+
+
+.reserve-text{
+    font-size: 1em;
+    font-style: italic;
+    color: #00296b;
+    padding-top: 0.5em;
+    text-transform: capitalize;
+}
+
+.vehicle-name{
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #00509d;
+    padding: 0.5em 0em;
+}
+
+
+
+@media only screen and (max-width: 370px){
+}
+
+
+@media only screen and (max-width: 850px) and (orientation: landscape){
+    .form-container{
+        height: 150vh;
+    }
+
+    .customer-infor-container{
+        height: calc(370vh + var(--vehicle-heigh));
+    }
+
+    .vehicle-infor-container{
+        height: 50%;
+    }
+
+    .vehicle-inner-container{
+        transform: translateY(calc(var(--vehicle-heigh)/3 * -1));
+    }
+
+    .vehicle-infor-container img{
+        --vehicle-heigh: 8em !important
+    }
+}
+
+
+@media only screen 
+   and (min-width : 768px) {
+
+    .form-container{
+        padding: 0em 5%;
+    }
+
+    .form-title{
+        font-size: 4em;
+    }
+
+    .input-row{
+        padding: 0em 5%;
+        justify-content: space-around;
+    }
+
+    .input-row label{
+        font-size: 2em;
+    }
+
+    .input-row input{
+        font-size: 1.5em;
+    }
+
+    .submit-button i{
+        font-size: 4em;
+    }
+
+    .inner-container{
+        padding: 5%;
+    }
+
+    .container-title p{
+        font-size: 2.7em;
+    }
+
+    .content-row label{
+        font-size: 2em;
+    }
+
+    .content-row input{
+        font-size: 1.5em;
+    }
+
+    .cancel-button{
+        font-size: 2em;
+    }
+
+    .vehicle-infor-container img{
+        --vehicle-heigh: 15em;
+        height: var(--vehicle-heigh);
+    }
+
+    .reserve-text{
+        font-size: 1.5em;
+    }
+
+    .vehicle-name{
+        font-size: 2.5em;
+    }
+
+}
+
+@media only screen 
+   and (min-width : 1024px) and (orientation: landscape){
+
+    .customer-infor-container{
+        height: calc(180vh + var(--vehicle-heigh)/2 + 25vh)
+    }
+   }
+
+
+
+@media only screen 
+and (min-width : 1200px) {
+    /* body and inner body container */
+    body{
+        padding-bottom: 0em !important;
+    }
+    .body-inner-container{
+        display: flex;
+        height: 90vh;
+        overflow: hidden;
+    }
+
+    /* Form container */
+    .form-container{
+        width: 30%;
+        height: 70%;
+        padding: 0%;
+        margin-top: 2%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .form-container form{
+        padding: 0em;
+    }
+        .form-title{
+            font-size: 2.5em;
+        }
+        .input-row label{
+            font-size: 1.5em;
+        }
+        .input-row input{
+            font-size: 1.3em;
+        }
+
+        .submit-button i{
+            font-size: 3em;
+        }
+
+    /* Customer infor container */
+
+    .customer-infor-container{
+        flex-direction: row;
+        height: 100%;
+        width: 70%;
+        align-items: flex-start;
+    }
+
+            .container-title p{
+                font-size: 2em;
+            }
+
+            .content-row label{
+                font-size: 1.3em;
+            }
+
+            .content-row input{
+                font-size: 1.1em;
+            }
+
+            .cancel-button{
+                font-size: 1.3em;
+            }
+
+    /* Vehicle Infor container */
+    .vehicle-infor-container{
+        display: flex;
+        height: 20%;
+    }
+    .vehicle-infor-container::after{
+        width: 80%;
+        height: 250%;
+        left: 10%;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%;
+    
+    }
+
+    .vehicle-infor-container img{
+        --vehicle-heigh: 10em
+    }
+
+    .vehicle-inner-container{
+        transform: translateY(calc(var(--vehicle-heigh)/3 * -1));
+    }
+
+    .reserve-text{
+        font-size: 1em;
+        padding: 0em;
+    }
+
+    .vehicle-name{
+        font-size: 2em;
+        padding: 0em;
+    }
+}
+
+
+
+
+@media only screen 
+and (min-width : 1600px) {
+
+}

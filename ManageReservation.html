@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Reservation</title>
+    <link href="./Photos/Logo/Logo.png" rel="icon">
+    <link href="./CSS/Navigation.css" rel="stylesheet" />
+    <link href="./CSS/ManageReservation.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="nav-container">
+        <img class="company-logo" src="Photos/Logo/Logo.png"/>
+        <div class="mobile-menu-icon">
+            <span class="first regular"></span>
+            <span class="regular"></span>
+            <span class="regular"></span>
+        </div>
+        <div class="laptop-nav">
+            <nav>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <span></span>
+                    <li><a href="vehicles.html">All Vehicles</a></li>
+                    <span></span>
+                    <li><a href="ReservationBooking.html">Book Us</a></li>
+                    <span></span>
+                    <li><a href="" class="active-page">Manage Reservation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="mobile-nav hide-menu">
+        <nav>
+            <ul>
+                <li class="roll-up"><a href="index.html" >Home</a></li>
+                <span></span>
+                <li class="roll-up"><a href="vehicles.html">All Vehicles</a></li>
+                <span></span>
+                <li class="roll-up"><a href="ReservationBooking.html">Book Us</a></li>
+                <span></span>
+                <li class="roll-up"><a href="" class="active-page">Manage Reservation</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="body-content">
+        <div class="body-inner-container">
+            <div class="form-container">
+                <p class="form-title">manage your reservation</p>
+                <form>
+                    <fieldset class="input-container">
+                        <div class="input-row">
+                            <label for="confirmation-code">confirmation:</label>
+                            <input type="text" id="confirmation-code" name="confirmation-code" required>
+                        </div>
+
+                        <div class="input-row">
+                            <label for="input-last-name">last name:</label>
+                            <input type="text" id="input-last-name" name="input-last-name" required>
+                        </div>
+                    </fieldset>
+
+                    <button class="submit-button">
+                        <i class="fas fa-search"></i>
+                        <span class="loader"></span>
+                    </button>
+                </form>
+            </div>
+
+
+            <div class="customer-infor-container">
+                <div class="inner-container">
+                    <div class="container-title">
+                        <p><i class="fas fa-user-alt"></i> customer infor.</p>
+                    </div>
+    
+                    <div class="infor-content">
+                        <div class="content-row">
+                            <label for="first-name">first name:</label>
+                            <input type="text" id="first-name" name="first-name" readonly>
+                        </div>
+    
+                        <div class="content-row">
+                            <label for="last-name">last name:</label>
+                            <input type="text" id="last-name" name="last-name"readonly>
+                        </div>
+    
+                        <div class="content-row">
+                            <label for="age">age:</label>
+                            <input type="text" id="age" name="age"readonly>
+                        </div>
+    
+                        <div class="content-row">
+                            <label for="email">email:</label>
+                            <input type="text" id="email" name="email"readonly>
+                        </div>
+    
+                        <div class="content-row">
+                            <label for="phone-number">phone:</label>
+                            <input type="text" id="phone-number" name="phone-number"readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inner-container">
+                    <div class="container-title">
+                        <p><i class="fas fa-bookmark"></i> pick up & drop off</p>
+                    </div>
+    
+                    <div class="infor-content">
+                        <div class="content-row">
+                            <label for="pick-up">pick up:</label>
+                            <input type="text" id="pick-up" name="pick-up" readonly>
+                        </div>
+    
+                        <div class="content-row">
+                            <label for="drop-off">drop off:</label>
+                            <input type="text" id="drop-off" name="drop-off"readonly>
+                        </div>
+    
+                        <div class="content-row">
+                            <label for="start-date">from:</label>
+                            <input type="text" id="start-date" name="start-date"readonly>
+                        </div>
+    
+                        <div class="content-row">
+                            <label for="end-date">to:</label>
+                            <input type="text" id="end-date" name="end-date"readonly>
+                        </div>
+    
+                    </div>
+                    <button type="button" class="cancel-button">cancel my reservation</button>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="vehicle-infor-container">
+                <div class="vehicle-inner-container">
+                    <img src="./Photos/Sport/mustang.png" alt="selected-car"/>
+                    <p class="reserve-text">reserved vehicle</p>
+                    <p class="vehicle-name">mustang GT</p>    
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/e23e09cf11.js" crossorigin="anonymous"></script>
+<script src="JS/navigation.js"></script>
+<script src="./JS/ManageReservation.js"></script>
+
+</body>
+</html>

@@ -102,7 +102,7 @@ background-color: white;
             z-index: 5;
             width: 100%;
             height: 90vh;
-            transition: transform 500ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+            transition: transform 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
             background-color: white;
         }
 
@@ -249,6 +249,7 @@ background-color: white;
 
             .slider img{
                 min-width: 20%;
+                object-fit: contain;
                 opacity: 0.5;
                 transition: 0.5s ease-in-out;
             }
@@ -492,7 +493,7 @@ body .title{
 
             .service-detail{
                 color: #00509d;
-                font-size: 1.2em;
+                font-size: 1.1em;
                 padding: 0.5em;
             }
 
@@ -558,9 +559,15 @@ body .title{
             }
 
             .gratitude-detail p {
-                font-size: 1.2em;
+                font-size: 1.1em;
                 color: #00509d;
                 padding: 1em 0.5em;
+            }
+
+            .gratitude-detail p span{
+                font-weight: bold;
+                font-size: 1em;
+
             }
 
             /* Feedback photos  */
@@ -648,6 +655,12 @@ body .title{
 .page-footer button i{
     font-size: 1.5em;
 }
+
+@media only screen and (max-width: 370px){
+    *{
+        font-size: 12px;
+    }
+    }
 
 
 @media only screen and (max-width: 850px) and (orientation: landscape){
@@ -753,7 +766,7 @@ body .title{
     }
 
     .service-detail{
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     .customer-feedback-container{
@@ -1023,7 +1036,7 @@ body .title{
     }
 
     .service-detail{
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     .customer-feedback-container{
