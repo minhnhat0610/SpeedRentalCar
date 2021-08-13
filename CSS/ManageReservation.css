@@ -1,13 +1,14 @@
 .body-content{
     width: 100%;
-    height: auto;
+    height: 90vh;
+    overflow: hidden;
+    background: rgb(255,213,0);
+    background: linear-gradient(45deg, rgba(255,213,0,1) 0%, rgba(238,255,104,1) 100%);  
 }
 
 .body-inner-container{
     width: 100%;
     height: auto;
-    background: rgb(255,213,0);
-background: linear-gradient(45deg, rgba(255,213,0,1) 0%, rgba(238,255,104,1) 100%); 
     position: relative;
 }
 
@@ -25,7 +26,15 @@ background: linear-gradient(45deg, rgba(255,213,0,1) 0%, rgba(238,255,104,1) 100
     align-items: center;
     justify-content: space-evenly;
     z-index: 3;
-}
+    box-shadow:
+    2.3px 2.3px 3.3px rgba(0, 0, 0, 0.034),
+    5.6px 5.6px 8px rgba(0, 0, 0, 0.048),
+    10.5px 10.5px 15px rgba(0, 0, 0, 0.06),
+    18.8px 18.8px 26.8px rgba(0, 0, 0, 0.072),
+    35.1px 35.1px 50.1px rgba(0, 0, 0, 0.086),
+    84px 84px 120px rgba(0, 0, 0, 0.12)
+  ;
+  }
 
 .form-container *{
     z-index: 4;
@@ -154,6 +163,12 @@ background: linear-gradient(45deg, rgba(255,213,0,1) 0%, rgba(238,255,104,1) 100
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 500ms ease-in-out 800ms;
+
+}
+
+.hide-customer-container{
+    opacity: 0;
 }
 
 .inner-container{
@@ -242,7 +257,12 @@ background: linear-gradient(45deg, rgba(255,213,0,1) 0%, rgba(238,255,104,1) 100
     bottom: 0px;
     z-index: 1;
     display: flex;
+    transition: 500ms ease-in-out 800ms;
+}
 
+.hide-vehicle-container{
+    opacity: 0;
+    transform: translateY(100%);
 }
 
 .vehicle-infor-container::after{
@@ -409,6 +429,10 @@ background: linear-gradient(45deg, rgba(255,213,0,1) 0%, rgba(238,255,104,1) 100
 
 @media only screen 
 and (min-width : 1200px) {
+    :root{
+        --active-form-width: 40%;
+        --active-form-height: 80%;
+    }
     /* body and inner body container */
     body{
         padding-bottom: 0em !important;
@@ -417,6 +441,11 @@ and (min-width : 1200px) {
         display: flex;
         height: 90vh;
         overflow: hidden;
+        transition: transform 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+
+    .first-loading{
+        transform: translate(calc((100% - var(--active-form-width))/2),5%);
     }
 
     /* Form container */
@@ -427,6 +456,12 @@ and (min-width : 1200px) {
         margin-top: 2%;
         border-radius: 10px;
         overflow: hidden;
+        transition: 500ms ease-out;
+    }
+
+    .active-form{
+        width: var(--active-form-width);
+        height: var(--active-form-height);
     }
 
     .form-container form{
@@ -453,6 +488,7 @@ and (min-width : 1200px) {
         height: 100%;
         width: 70%;
         align-items: flex-start;
+
     }
 
             .container-title p{
@@ -475,6 +511,7 @@ and (min-width : 1200px) {
     .vehicle-infor-container{
         display: flex;
         height: 20%;
+
     }
     .vehicle-infor-container::after{
         width: 80%;
