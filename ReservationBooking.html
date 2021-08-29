@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,6 +44,8 @@
                 <li class="roll-up"><a href="" class="active-page">Book Us</a></li>
                 <span></span>
                 <li class="roll-up"><a href="ManageReservation.html">Manage Reservation</a></li>
+                <li class="roll-up"><a href=""></a></li>
+
             </ul>
         </nav>
     </div>
@@ -261,62 +264,65 @@
 
             <div class="process-content">
                 <div class="customer-form-container">
-                    <div class="total-infor-container">
-                        <div class="label">
-                            <p>vehicle name:</p>
+                    <form class="total-infor-form">
+                        <div class="total-infor-container">
+                            <div class="label">
+                                <p>vehicle name:</p>
+                            </div>
+                            <div class="total-infor-detail">
+                                <input type="text" id="vehicle-name" name="vehicle-name" readonly/>
+                            </div>
                         </div>
-                        <div class="total-infor-detail">
-                            <input type="text" id="vehicle-name" name="vehicle-name" readonly/>
+    
+                        <div class="total-infor-container">
+                            <div class="label">
+                                <p>rate:</p>
+                            </div>
+                            <div class="total-infor-detail">
+                                <input type="text" id="vehicle-price" name="vehicle-price" readonly/>
+    
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="total-infor-container">
-                        <div class="label">
-                            <p>rate:</p>
+    
+                        <div class="total-infor-container">
+                            <div class="label">
+                                <p>num. of days:</p>
+                            </div>
+                            <div class="total-infor-detail">
+                                <input type="text" id="num-of-day" name="num-of-day" readonly/>
+                            </div>
                         </div>
-                        <div class="total-infor-detail">
-                            <input type="text" id="vehicle-price" name="vehicle-price" readonly/>
-
+    
+                        <div class="total-infor-container">
+                            <div class="label">
+                                <p>tax:</p>
+                            </div>
+                            <div class="total-infor-detail">
+                                <input type="text" id="tax-amount" name="tax-amount" readonly/>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="total-infor-container">
-                        <div class="label">
-                            <p>num. of days:</p>
+                        
+                        <div class="total-infor-container">
+                            <div class="label">
+                                <p>other fee:</p>
+                            </div>
+                            <div class="total-infor-detail">
+                                <input type="text" id="other-fee" name="other-fee" readonly/>
+                            </div>
                         </div>
-                        <div class="total-infor-detail">
-                            <input type="text" id="num-of-day" name="num-of-day" readonly/>
+    
+                        <div class="divider"></div>
+    
+                        <div class="total-infor-container">
+                            <div class="label" id="total-label">
+                                <p>total:</p>
+                            </div>
+                            <div class="total-infor-detail" id="total-figure">
+                                <input type="text" id="total-amount" name="total-amount" readonly/>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="total-infor-container">
-                        <div class="label">
-                            <p>tax:</p>
-                        </div>
-                        <div class="total-infor-detail">
-                            <input type="text" id="tax-amount" name="tax-amount" readonly/>
-                        </div>
-                    </div>
-                    
-                    <div class="total-infor-container">
-                        <div class="label">
-                            <p>other fee:</p>
-                        </div>
-                        <div class="total-infor-detail">
-                            <input type="text" id="other-fee" name="other-fee" readonly/>
-                        </div>
-                    </div>
-
-                    <div class="divider"></div>
-
-                    <div class="total-infor-container">
-                        <div class="label" id="total-label">
-                            <p>total:</p>
-                        </div>
-                        <div class="total-infor-detail" id="total-figure">
-                            <input type="text" id="total-amount" name="total-amount" readonly/>
-                        </div>
-                    </div>
+                    </form>
+                   
                 </div>
 
                 <button class="confirm-btn" type="submit">confirm</button>

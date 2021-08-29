@@ -267,11 +267,32 @@ $('.go-back-button').on('click', function(e){
 })
 
 
+
+//Confirm button click
 $('.confirm-btn').on('click',function(){
     $('.loader-container').addClass('show-loader');
+
+    SendDataToServer();
 })
 
-
+let SendDataToServer = () => {
+    serializedData = $('.form-container form').serialize() +'&'+ $('.customer-form-container form').serialize();
+    $.ajax({
+        type: 'post',
+        url: "./PHP/BookingReservation.php",
+        data: serializedData,
+        success: function (data){
+            console.log('transfer successfully');
+            console.log(data);
+            if(data == 'success'){
+                window.location.href = './BookingConfirm.php';
+            }
+        },
+        error: function(jqXHR, textStatus, errorMessage){
+            console.log(errorMessage);
+        }
+    })
+}
 // end of Document ready call back
 })
 

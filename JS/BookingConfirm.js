@@ -15,4 +15,19 @@ $(document).ready(function(){
     $('.gratitude-statement').css({
         transform: 'translateY(0%)'
     })
+
+    // // Retrieve confirmation code from the sever
+    // $.ajax({
+    //     type: 'post',
+    //     data: "",
+    //     url: './PHP/BookingConfirm.php',
+    //     success: function(data){
+    //         console.log('send successfully');
+    //         console.log(data);
+    //         // $('.confirmation-code').text(data);
+    //     },
+    //     error: function(jqXHR, textStatus, errorMessage){
+    //         console.log(errorMessage);
+    //     }
+    // })
 })

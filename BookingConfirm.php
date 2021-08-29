@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,6 +44,8 @@
                 <li class="roll-up"><a href="ReservationBooking.html">Book Us</a></li>
                 <span></span>
                 <li class="roll-up"><a href="ManageReservation.html">Manage Reservation</a></li>
+                <li class="roll-up"><a href=""></a></li>
+
             </ul>
         </nav>
     </div>
@@ -55,12 +60,16 @@
                 <div>
                     <p class="gratitude-statement">thank you for choosing us</p>
                     <p class="confirmation">your booking has been confirmed with confirmation code
-                         <span class="confirmation-code">#123456</span>
+                         <span class="confirmation-code">
+                         <?php
+                            echo $_SESSION['confirmation'];
+                            ?>
+                         </span>
                     </p>    
                 </div>
 
                 <div class="extra-infor">
-                    <p>You can manage your reservation at <a href="">Manage reservation</a></p>
+                    <p>You can manage your reservation at <a href="./ManageReservation.html">Manage reservation</a></p>
                     <p>Contact us if you have any question <a href="tel:+15021593578">+1 (502)-159-3578</a></p>
                 </div>
             </div>

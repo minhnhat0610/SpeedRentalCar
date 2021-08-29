@@ -41,6 +41,7 @@
                 <li class="roll-up"><a href="ReservationBooking.html">Book Us</a></li>
                 <span></span>
                 <li class="roll-up"><a href="" class="active-page">Manage Reservation</a></li>
+                <li class="roll-up"><a href=""></a></li>
             </ul>
         </nav>
     </div>
@@ -61,7 +62,7 @@
                             <input type="text" id="input-last-name" name="input-last-name" required>
                         </div>
                     </fieldset>
-
+                    <p class="error-message"></p>
                     <button class="submit-button">
                         <i class="fas fa-search"></i>
                         <span class="loader"></span>
@@ -139,12 +140,29 @@
             </div>
 
 
+
             <div class="vehicle-infor-container hide-vehicle-container">
                 <div class="vehicle-inner-container">
-                    <img src="./Photos/Sport/mustang.png" alt="selected-car"/>
+                    <img class="vehicle-image" src="./Photos/Sport/mustang.png" alt="selected-car"/>
                     <p class="reserve-text">reserved vehicle</p>
                     <p class="vehicle-name">mustang GT</p>    
                 </div>
+            </div>
+        </div>
+
+        <div class="cancel-confirm-box">
+            <div class="inner-box">
+                <p class="confirm-question">do you confirm to cancel your reservation?</p>
+                <div class="button-container">
+                    <button type="button" id="yes-button">yes</button>
+                    <button type="button" id="no-button">no</button>
+                </div>
+
+                <p class="disclaimer">
+                    *** Disclaimer: To cancel your reservation, we will charge <span class="cancel-fee">$50.00</span> fee
+                    to process your cancelation. It will take up to 5-7 business days for refund to your account.
+                    Reach out to our experts if your have any question at <a href="tel:+15021593578">+1 (502)-159-3578</a>
+                </p>
             </div>
         </div>
     </div>
